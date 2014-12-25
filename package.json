@@ -1,0 +1,28 @@
+{
+  "name": "super-prop",
+  "version": "0.1.0",
+  "description": "Attaches a property accessor for a super class",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmancini55/super-prop"
+  },
+  "keywords": [
+    "super",
+    "super class",
+    "base class"
+  ],
+  "author": "Brian Mancini <bmancini@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-mocha-test": "^0.12.4",
+    "mocha": "^2.1.0"
+  }
+}
