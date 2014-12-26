@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/super-simple');
+module.exports = require('./lib/super-prop');
