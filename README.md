@@ -3,13 +3,26 @@ super-prop
 
 >Attach a property accessor for the super class
 
-Ever wanted some syntactic sugar for calling functions up the prototype chain? The usual technique of `BaseClass.prototype.someMethod.call(this)` leaves a bit to be desired. Now you can use `super-prop` to ease your troubles and follow similar synxtax to other object-oriented languages that give you access to the base/super class methods.
+Ever wanted some syntactic sugar for calling functions up the prototype chain? The usual technique of `BaseClass.prototype.someMethod.call(this)` leaves a bit to be desired. 
 
-So what does `super-prop` do?
+You can use `super-prop` to use similar synxtax to other object-oriented languages.
+
+What does `super-prop` do?
 
 1. Gives you sugar for calling base/super class methods
 2. Gives you sugar for calling the base/super constructor
 3. Lazy-loads the bindings
+
+More importantly, what does `super-prop` look like?
+
+```
+Child.prototype.validate = function() {
+  // call super class's validate method
+  this.super.validate();
+  
+  // then do my own stuff here
+}
+```
 
 ## Getting Started
 
@@ -36,16 +49,18 @@ function Child() {
 }
 ```
 
-Now, you can simply access the base/super method via the `super` property! // If we're overriding the parent classes 'validate' method, we'd have to use something like `Parent.prototype.validate.call(this)`.  Now we can just use `this.super.validate()` to do the same thing.
+Now, you can simply access the base/super method via the `super` property! 
 ```
 Child.prototype.validate = function() {
-  // call the super class method!
+  // call super class's validate method
   this.super.validate();
   
+  // then do my own stuff here
 }
 ```
+Previously, you'd have to use `Parent.prototype.validate.call(this)`.  Now we can just use `this.super.validate()` to do the same thing.
 
-##Full Example
+##Example
 ```
 var superprop = require('super-prop')
   , util      = require('util');
