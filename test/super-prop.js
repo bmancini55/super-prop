@@ -65,6 +65,18 @@ describe('super-prop', function() {
       var sut = new Child();
       expect(sut.ctorProp).to.equal('Hello');
     });
+
+    it('should execute super constructor with arguments', function() {
+      function Parent(greeting) {
+        this.greeting = greeting;
+      }
+      function Child() {
+        superprop.define(this, Parent);
+        this.super('hello');
+      }
+      var sut = new Child();
+      expect(sut.greeting).to.equal('hello');
+    });
   });
 
   
