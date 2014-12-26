@@ -5,8 +5,6 @@ super-prop
 
 Ever wanted some syntactic sugar for calling functions up the prototype chain? The usual technique of `BaseClass.prototype.someMethod.call(this)` leaves a bit to be desired. 
 
-You can use `super-prop` to use similar synxtax to other object-oriented languages.
-
 What does `super-prop` do?
 
 1. Gives you sugar for calling base/super class methods
@@ -15,7 +13,7 @@ What does `super-prop` do?
 
 More importantly, what does `super-prop` look like?
 
-```
+```javascript
 Child.prototype.validate = function() {
   // call super class's validate method
   this.super.validate();
