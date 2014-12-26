@@ -50,7 +50,7 @@ function Child() {
 ```
 
 Now, you can simply access the base/super method via the `super` property! 
-```
+```javascript
 Child.prototype.validate = function() {
   // call super class's validate method
   this.super.validate();
@@ -61,7 +61,7 @@ Child.prototype.validate = function() {
 Previously, you'd have to use `Parent.prototype.validate.call(this)`.  Now we can just use `this.super.validate()` to do the same thing.
 
 ##Example
-```
+```javascript
 var superprop = require('super-prop')
   , util      = require('util');
 
@@ -92,8 +92,9 @@ Child.prototype.greet = function() {
 
 // create an instance of the child
 var child = new Child();
-child.greet();          // logs 'Hello' then 'Hola'
 
+// logs 'Hello' then 'Hola'
+child.greet();
 ```
 
 ## Contributing
