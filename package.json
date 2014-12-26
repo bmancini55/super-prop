@@ -1,6 +1,6 @@
 {
   "name": "super-prop",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Attaches a property accessor for a super class",
   "main": "index.js",
   "scripts": {
